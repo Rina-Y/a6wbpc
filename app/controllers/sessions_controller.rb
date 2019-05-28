@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  skip_authorization
+  
   def new
   end
 

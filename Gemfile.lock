@@ -137,8 +137,8 @@ GEM
     sassc (2.0.1)
       ffi (~> 1.9)
       rake
-    solargraph (0.32.3)
-      backport (~> 1.0)
+    solargraph (0.32.4)
+      backport (~> 1.1)
       bundler (>= 1.17.2)
       htmlentities (~> 4.3, >= 4.3.4)
       jaro_winkler (~> 1.5)

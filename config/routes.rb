@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'tally/index'
-  root to: 'tally#index'
+  # get 'tally/index'
+  # root to: 'tally#index'
   
   resources :users
   resources :sessions, only: [:new, :create, :destroy]

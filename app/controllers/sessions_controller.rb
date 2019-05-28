@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_authorization
+  skip_authorized_resource
   
   def new
   end

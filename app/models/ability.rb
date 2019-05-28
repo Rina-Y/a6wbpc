@@ -1,17 +1,13 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :read, Tally, public: true
+    user ||= User.new
 
-    if user.present?  # additional permissions for logged in users (they can read their own posts)
-      can :read, Tally, user_id: user.id
+    can :create, User
 
-      if user.admin?  # additional permissions for administrators
-        can :manage, :all
-      end
+    if user.admin? 
+      can :manage, User
     end
   end
 end

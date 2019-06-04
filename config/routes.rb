@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :tallies
   resources :tasks
   resources :members
   root to: 'members#index'

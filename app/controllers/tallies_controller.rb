@@ -13,4 +13,5 @@ class TalliesController < ApplicationController
   # GET /tallies/1.json
   def show
   end
+  
 end

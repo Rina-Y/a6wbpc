@@ -1,7 +1,7 @@
 module Admin 
   class TalliesController < ApplicationController
-    before_action :set_tally, only: [:show, :edit, :update, :destroy]
     load_and_authorize_resource
+    include TallyScoped
     
     # GET /tallies
     # GET /tallies.json
@@ -63,15 +63,5 @@ module Admin
       end
     end
     
-    private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_tally
-      @tally = Tally.find(params[:id])
-    end
-    
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def tally_params
-      params.require(:tally).permit(:member_id, :task_id)
-    end
   end
 end

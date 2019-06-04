@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     if current_user
       redirect_to root_url
     else
-      redirect_to log_in_path
+      redirect_to login_path
     end
     
   end

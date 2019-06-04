@@ -7,7 +7,7 @@ class Ability
     can :create, User
 
     if user.admin? 
-      can :manage, User
+      can :manage, :all
     end
   end
 end

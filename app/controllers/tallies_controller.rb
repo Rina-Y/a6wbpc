@@ -1,5 +1,6 @@
 class TalliesController < ApplicationController
   before_action :set_tally, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
 
   # GET /tallies
   # GET /tallies.json

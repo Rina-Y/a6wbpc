@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :tallies
+    resources :tasks
+    resources :members
+  end
+
   resources :tallies
-  resources :tasks
-  resources :members
+
   root to: 'members#index'
   
   resources :users

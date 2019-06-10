@@ -1,14 +1,33 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Member Tally</h1>
 <p>
-  <strong>Name:</strong>
-  <%= @member.name %>
-</p>
-
-<p>
-  <strong>Number:</strong>
+  <strong>Member #</strong>
   <%= @member.number %>
 </p>
 
-<%= link_to 'Edit', edit_member_path(@member) %> |
+<p>
+
+  <strong>Tally</strong>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @member.tasks.each do |task| %>  
+        <tr>
+          <td><%= task.name %></td>
+          <td><%= task.points %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</p>
+
 <%= link_to 'Back', members_path %>
+
+
+<p id="notice"><%= notice %></p>
+
